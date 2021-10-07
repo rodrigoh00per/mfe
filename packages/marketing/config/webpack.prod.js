@@ -6,9 +6,9 @@ const packageJSON = require("../package.json");
 
 const devConfig = {
     mode: "production",
-   
+    publicPath: "/marketing/latest/",
     plugins: [
-        
+
         new ModuleFederationPlugin({
             name: "marketing",
             filename: "remoteEntry.js",
