@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import MarketingApp from './MarketingApp';
+import Header from "./Header";
+import { BrowserRouter } from 'react-router-dom';
 
-const App = () => {
-    return (<div>
-        <h1>this is the container app</h1>
-        <hr />
+const App = () =>
+(<BrowserRouter>
+    <div>
+        <Header />
         <MarketingApp />
-        </div>);
-}
+    </div>
+ </BrowserRouter>
+);
+
 
 export default App;
