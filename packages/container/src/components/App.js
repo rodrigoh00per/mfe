@@ -9,7 +9,7 @@ const App = () =>
         <Header />
         <MarketingApp />
     </div>
-    </BrowserRouter>
+</BrowserRouter>
 );
 
 
