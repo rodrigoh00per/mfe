@@ -4,7 +4,8 @@ import Header from "./Header";
 import { BrowserRouter } from 'react-router-dom';
 
 const App = () =>
-(<BrowserRouter>
+(
+<BrowserRouter>
     <div>
         <Header />
         <MarketingApp />

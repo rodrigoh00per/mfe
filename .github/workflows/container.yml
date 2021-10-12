@@ -29,7 +29,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: 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
           AWS_DEFAULT_REGION: us-east-1
       
-      - run: aws cloudfront create-invalidation --distribution-id E6MQIRYBM3071 --paths "/container/latest/index.html"
+      - run: aws cloudfront create-invalidation --distribution-id E6MQIRYBM3071 --paths /container/latest/index.html"
         env:
           AWS_ACCESS_KEY_ID: AKIAX3CI3ISDYZR2O5CV
           AWS_SECRET_ACCESS_KEY: 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
