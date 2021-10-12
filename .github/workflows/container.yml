@@ -20,17 +20,17 @@ jobs:
       - run: npm install
       - run: npm run build
         env:
-          PRODUCTION_DOMAIN: ${{ secrets.PRODUCTION_DOMAIN }}
+          PRODUCTION_DOMAIN: https://d3k3t7i9qypx9l.cloudfront.net
 
       - uses: shinyinc/action-aws-cli@v1.2
-      - run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
+      - run: aws s3 sync dist s3://microfre-container-rgr/container/latest
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: AKIAX3CI3ISDYZR2O5CV
+          AWS_SECRET_ACCESS_KEY: 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
           AWS_DEFAULT_REGION: us-east-1
       
-      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/container/latest/index.html"
+      - run: aws cloudfront create-invalidation --distribution-id E6MQIRYBM3071 --paths "/container/latest/index.html"
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: AKIAX3CI3ISDYZR2O5CV
+          AWS_SECRET_ACCESS_KEY: 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
           AWS_DEFAULT_REGION: us-east-1
