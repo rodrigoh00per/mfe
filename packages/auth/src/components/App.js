@@ -5,7 +5,6 @@ import SignIn from "./Signin";
 import SignUp from "./Signup";
 
 const App = ({ history, onSignIn }) => {
-    
     const generateClassName = createGenerateClassName({ productionPrefix: "au" })
     return (
         <StylesProvider generateClassName={generateClassName}>
